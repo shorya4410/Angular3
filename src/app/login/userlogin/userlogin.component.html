@@ -1,0 +1,64 @@
+<div class="container text-center" >
+    <button type="button" class="btn btn-primary" (click)="goToHome()">Go To Home</button><hr>
+    <div class="A" *ngIf = "login">
+       <form [formGroup]="Ulogin" (ngSubmit)="UloggingIn()"> 
+        <div>
+            <input type="text" placeholder="Username" id="UserName" formControlName="UserName">
+            <br><br>
+            <span *ngIf="!Ulogin.get('UserName').valid && Ulogin.get('UserName').touched">Please enter UserName</span>
+        </div>
+        <div>
+            <input type="password" placeholder="Password" id="Upass" formControlName="UPass">
+            <br><br>
+            <span *ngIf="!Ulogin.get('UPass').valid && Ulogin.get('UPass').touched">Please enter UserPassword</span>
+        </div> 
+        <button class="btn btn-primary" type="submit">sign in</button>  
+        <h4 *ngIf="!showError">Please Enter Details</h4> 
+    </form>
+    <p>Don't have an account ? <button class="btn btn-secondary" (click)="goToCreateAcc()">Create Account</button></p> 
+    </div>
+    <div class="A" *ngIf="!login">
+        <form [formGroup]="UserRegister" (ngSubmit)="CreateAcc()"> 
+            <div>
+                <input type="number" placeholder=" Enter id"  formControlName="id">
+                <br><br>
+                <span *ngIf="!UserRegister.get('id').valid && UserRegister.get('id').touched">Please enter UserID</span>
+            </div>
+            <div>
+                <input type="text" placeholder=" Enter Username" formControlName="UserName">
+                <br><br>
+                <span *ngIf="!UserRegister.get('UserName').valid && UserRegister.get('UserName').touched">Please enter Username</span>
+            </div>
+            <div>
+                <input type="text" placeholder="Enter Name" formControlName="Uname">
+                <br><br>
+                <span *ngIf="!UserRegister.get('Uname').valid && UserRegister.get('Uname').touched">Please enter Name</span>
+            </div>
+            <div>
+                <input type="number" placeholder="Enter Mobile Number" formControlName="Unumber">
+                <br><br>
+                <span *ngIf="!UserRegister.get('Unumber').valid && UserRegister.get('Unumber').touched">Please enter Number</span>
+            </div>
+            <div>
+                <input type="email" placeholder="Enter Email" formControlName="Uemail">
+                <br><br>
+                <span *ngIf="!UserRegister.get('Uemail').valid && UserRegister.get('Uemail').touched">Please enter Email</span>
+            </div>
+            <div>
+                <input type="file" placeholder="Upload Image" formControlName="Uimg">
+                <br><br>
+                <span *ngIf="!UserRegister.get('Uimg').valid && UserRegister.get('Uimg').touched">Please upload image</span>
+                <img src="">
+            </div>
+            <div>
+                <input type="password" placeholder="Enter Password" formControlName="UPass">
+                <br><br>
+                <span *ngIf="!UserRegister.get('UPass').valid && UserRegister.get('UPass').touched">Please enter Password</span>
+            </div>
+              
+            <button class="btn btn-primary" type="submit" >Register</button>
+        </form>
+        <p>Have an account ? <button class="btn btn-secondary" (click)="goToUlogin()">Login</button></p>
+    </div>
+</div>
+    

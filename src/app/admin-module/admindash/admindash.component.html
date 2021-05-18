@@ -1,0 +1,33 @@
+<body>
+    <div class="container">
+        <div class="text-center">
+            <h1>
+                List of User Details
+            </h1>
+            <table>
+            <thead>
+                <tr>
+                    <td>
+                        UserName
+                    </td>&nbsp;&nbsp;
+                    <td>
+                        User Email
+                    </td>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <td>
+                        Perform Action
+                    </td>
+                </tr>
+            </thead>
+                <tbody *ngFor="let val of detail">
+                    <tr>
+                        <td>{{val.UserName}}</td>&nbsp;&nbsp;
+                        <td>{{val.Uemail}}</td>&nbsp;&nbsp;
+                        <td><button type="button" class="btn btn-secondary" (click)="enableUser(val.id)">Enable User</button>&nbsp;&nbsp;<button type="button" class="btn btn-danger" (click)="disableUser(val.id)" >Disable User</button></td>
+                    </tr>
+                </tbody>
+        
+            </table>
+            <button type="button" class="btn btn-primary" (click)="logoutAdmin()">Logout</button>
+        </div>
+    </div>
+</body>

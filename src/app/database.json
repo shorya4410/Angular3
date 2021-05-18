@@ -1,0 +1,52 @@
+{
+  "admin": [
+    {
+      "Aname": "Admin",
+      "Apass": "@Dm1n321"
+    }
+  ],
+  "userdata": [
+    {
+      "id": 1,
+      "UserName": "user1",
+      "Uname": "user1",
+      "Unumber": 1999999999,
+      "Uemail": "user1@gmail.com",
+      "UPass": "user1",
+      "Uimg": "C:\\fakepath\\img1.jpg",
+      "verified": false,
+      "emailOTP": null,
+      "friendRequest": "",
+      "friends": "user2",
+      "isEnabled": true
+    },
+    {
+      "id": 2,
+      "UserName": "user2",
+      "Uname": "user2",
+      "Unumber": 2999999999,
+      "Uemail": "user2@gmail.com",
+      "UPass": "user2",
+      "Uimg": "C:\\fakepath\\img2.jpg",
+      "verified": false,
+      "emailOTP": null,
+      "friendRequest": null,
+      "friends": "user1",
+      "isEnabled": true
+    },
+    {
+      "id": 3,
+      "UserName": "shorya3",
+      "Uname": "shorya",
+      "Unumber": 9999067043,
+      "Uemail": "shorya8223@gmail.com",
+      "UPass": "shorya8223",
+      "Uimg": "C:\\fakepath\\img2.jpg",
+      "verified": false,
+      "emailOTP": null,
+      "friendRequest": null,
+      "friends": null,
+      "isEnabled": true
+    }
+  ]
+}

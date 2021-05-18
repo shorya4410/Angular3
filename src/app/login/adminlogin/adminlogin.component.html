@@ -1,0 +1,19 @@
+<div class="container text-center">
+    <button type="button" class="btn btn-primary" (click)="goToHome()">Go To Home</button><hr>
+    <div class="row text-center" id="C">
+        <form [formGroup]="Alogin" (ngSubmit)="AdminLogging()"> 
+            <div>
+                <input type="text" placeholder="Username" id="Aname" formControlName="Aname">
+                <br><br>
+                <span *ngIf="!Alogin.get('Aname').valid && Alogin.get('Aname').touched">Please enter Username</span>
+            </div>
+            <div>
+                <input type="password" placeholder="Password" id="Apass" formControlName="Apass">
+                <br><br>
+                <span *ngIf="!Alogin.get('Apass').valid && Alogin.get('Apass').touched">Please enter details</span>
+            </div>
+            <button class="btn btn-primary" type="submit">sign in</button>
+            <h5 *ngIf="vacantInput">Please Enter Details to Login</h5>
+        </form>
+    </div>
+</div>
